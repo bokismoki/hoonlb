@@ -36,14 +36,21 @@ body {
 /* HEADER */
 .header {
   background-color: #3e3e52;
+  min-height: 64px;
+  position: relative;
+  display: flex;
 }
 .header--container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: 100%;
 }
 .header--logos {
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .header--logo {
   display: flex;
@@ -58,7 +65,7 @@ body {
 .header--logo-img {
   display: flex;
   max-width: 100px;
-  max-height: 80px;
+  max-height: 64px;
   object-fit: contain;
 }
 .header--nav {
@@ -107,17 +114,20 @@ body {
 
 /* MAIN */
 .main {
-  padding: 140px 16px;
+  position: relative;
+  padding: 140px 0;
 }
 .main--logo {
-  max-width: 200px;
-  max-height: 80px;
+  max-width: 250px;
+  max-height: 200px;
   object-fit: contain;
   margin-bottom: 50px;
 }
 .main--content {
   max-width: 1050px;
   color: #e4e4e4;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 .main--title {
   font-size: 25px;
@@ -148,12 +158,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .main {
-    padding: 140px 20px;
-  }
   .main--logo {
     max-width: 280px;
     margin-bottom: 64px;
+  }
+  .main--content {
+    padding: 0 20px;
   }
   .main--title {
     font-size: 35px;
@@ -171,11 +181,11 @@ body {
 
 @media screen and (min-width: 1280px) {
   .main--logo {
-    max-width: 320px;
+    max-width: 450px;
     margin-bottom: 76px;
   }
   .main--content {
-    margin-left: 100px;
+    margin: 0 auto;
   }
   .main--title {
     font-size: 48px;
@@ -196,6 +206,9 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     min-height: 60vh;
+  }
+  .main--logo {
+    max-width: 700px;
   }
 }
 
