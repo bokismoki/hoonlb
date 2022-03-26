@@ -30,7 +30,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left;
+  object-position: center;
 }
 
 /* HEADER */
@@ -107,6 +107,9 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+  .bg {
+    object-position: left;
+  }
   .header--nav-list-item-link {
     font-size: 24px;
   }
